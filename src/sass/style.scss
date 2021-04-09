@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* Colors */
+
+//***** Primary
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+//***** Accent
+
+$blue: hsl(248, 32%, 49%);
+
+//***** Neutral
+$darkGreen:  hsl(154, 50%, 27%);
+$darkBlue: hsl(249, 10%, 26%); 
+$grayishBlue: hsl(246, 25%, 77%);
+
+
+/* Layout */
+body { 
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: $red !important;
+    background-attachment: fixed;  
+}
+
+.container {
+    max-width: 1440px;
+    height: 100vh;
+}
+
+#hero {
+    color: white;
+    & h1 {
+        font-size: 3.5em;
+        font-weight: 700;
+    }
+    & p {
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+
+#btn-blue {
+    background-color: $blue;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 7.5px 0 rgba(15, 15, 15, 0.2);
+    &:hover {
+        background-color: $darkBlue;
+        transition: 0.3s;
+    }
+}
+
+.btn-green {
+    background-color: $green;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 5px 0 rgba(0, 109, 5, 0.5);
+    &:hover {
+        background-color: $darkGreen;
+        transition: 0.3s;
+    }
+}
+
+#form-hero {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 7.5px 0 rgba(15, 15, 15, 0.2);
+    & small {
+        font-size: 0.7em;
+        opacity: 0.7;
+    }
+    & a {
+        color: $red;
+        font-size: 1em;
+        font-weight: 600;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.attribution { 
+    font-size: 0.8em; 
+    text-align: center; 
+    color: white;
+    & a {
+        color: $blue;
+        font-size: 1.2em;
+        font-weight: 600;
+        &:hover {
+            text-decoration: none;
+            color: $darkBlue;
+        }
+    }
+}
+
+.error {
+    border: 2px solid $red !important;
+    background: url('../images/icon-error.svg') no-repeat;
+    background-position: 97% 50%;
+}
+  
+.valid {
+    border: 2px solid $green !important;
+    background: url('../images/success.svg') no-repeat;
+    background-position: 97% 50%;
+    background-size: 24px 24px;
+}
+  
+.err-span {
+    font-size: 11px;
+    color: $red;
+    display: none;
+    text-align: end;
+}
+
+@media(max-width:992px) {
+
+    .container {
+        margin: 10rem 0;
+        height: 100%;
+    }
+
+    #hero {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+    
+}
